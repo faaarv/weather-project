@@ -4,6 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from "axios"
 import Current from "./Current"
 import parse from 'html-react-parser';
+import { MagnifyingGlass } from "react-loader-spinner";
+
 let days = [
     "Sun",
     "Mon",
@@ -92,5 +94,19 @@ export default function Weather(){
 
     } else {
         callApi()
+        return (
+            <div>
+                <MagnifyingGlass
+                visible={true}
+                height="80"
+                width="80"
+                ariaLabel="MagnifyingGlass-loading"
+                wrapperStyle={{}}
+                wrapperClass="MagnifyingGlass-wrapper"
+                glassColor="#c0efff"
+                color="#e15b64"/>
+            </div>
+            
+        )
     }
 }
