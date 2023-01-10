@@ -35,14 +35,14 @@ export default function Weather(){
     }
 
     function handleForecastResponse(response){
-        forecastElment = `<div className="row">`
+        forecastElment = `<div className="row gap-1  ">`
         let i=1
         while (i<7) {
             let forcasteDate = new Date(response.data.daily[i].time*1000)
-            forecastElment = forecastElment + `<div className="col ">
+            forecastElment = forecastElment + `<div className="col shadow p-3 ">
             <div className="card-header">${days[forcasteDate.getDay()]}</div>
             <div className="card-body"><img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.daily[i].condition.icon}.png" alt=""></div>
-            <div className="card-footer">${Math.round(response.data.daily[i].temperature.minimum)}°C  \xa0  ${Math.round(response.data.daily[i].temperature.maximum)}°C </div>
+            <div className="card-footer">${Math.round(response.data.daily[i].temperature.minimum)}°C \xa0 <strong>${Math.round(response.data.daily[i].temperature.maximum)}°C</strong>  </div>
             </div>`
             i++}
         forecastElment = forecastElment + `</div>`;
