@@ -32,6 +32,7 @@ export default function Weather(){
             imgSrc :`http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
 
         })
+        
     }
 
     function handleForecastResponse(response){

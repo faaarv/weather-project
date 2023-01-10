@@ -11,6 +11,7 @@ import { HiLocationMarker } from "react-icons/hi";
 let days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
 
 export default function Current(props) {
+  
     return (
         <div className="weather-now container mt-1 border-bottom border-danger-subtle ">
                 <div className="row">
