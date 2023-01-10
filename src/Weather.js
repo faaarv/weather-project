@@ -63,7 +63,7 @@ export default function Weather(){
     }
     if (info.ready){
         return (
-            <div>
+            <div className="container">
             <div className="search-box">
                 <form className="d-flex" role="search" onSubmit={handleSubmit}>
                   <input
