@@ -19,7 +19,7 @@ body{
 
 .App .wrapper{
   margin-top: 50px;
-    border: 1px solid rgba(255, 20, 145, 0.863);
+    border: 1px solid #ff1492dc;
     border-radius: 25px;
     padding: 25px 25px;
     width: 80%;
