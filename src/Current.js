@@ -11,7 +11,7 @@ let days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturda
 
 export default function Current(props) {
     return (
-        <div className="weather-now mt-1">
+        <div className="weather-now mt-1 border-bottom border-danger-subtle ">
                 <div className="row">
                     <div className="col-4 pt-3 ps-sm-3 align-middle text-start">
                         <p className='fs-1 text-capitalize '>{props.input.city}</p>
