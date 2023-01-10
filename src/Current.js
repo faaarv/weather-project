@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css"
-
+let days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
 
 export default function Current(props) {
     return (
@@ -9,6 +9,7 @@ export default function Current(props) {
                     <div className="col-4 pt-3 align-middle">
                         <p className='fs-2 text-capitalize'>{props.input.city}</p>
                         <p className="text-muted">
+                        <span>{days[new Date().getDay()]}</span>, 
                         <span className="day">{new Date().toLocaleString('en-GB', {day: 'numeric',
                         month: 'short',}) + ""}</span> ,<span className="time">
                         {new Date().toLocaleString('en-US', {hour: 'numeric',minute: 'numeric',hour12: true,})}</span>
